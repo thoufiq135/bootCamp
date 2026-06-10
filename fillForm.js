@@ -10,7 +10,7 @@ route.post("/innovationClub", async (req, res) => {
     )
     const { school_name, emai_id, phone_number, school_address, area, district, description } = req.body || {};
 
-    if (!Name || !ParentName || !mobile_no || !School || !Class || !des || !q_A) {
+    if (!school_name|| !emai_id|| !phone_number ||!school_address ||!area|| !district || !description) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
