@@ -64,4 +64,3 @@ async function connectdb() {
 }
 
 module.exports = { InnovationClub, connectdb };
-, school address, area, district, description
