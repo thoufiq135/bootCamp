@@ -35,7 +35,7 @@ default: "pending",
    
     description: {
       type: String,
-      required: true,
+      
       trim: true,
     },
     

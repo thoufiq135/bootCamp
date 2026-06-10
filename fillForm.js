@@ -15,7 +15,7 @@ route.post("/innovationClub", async (req, res) => {
     }
 
     const newForm = await InnovationClub.create({
-      school_name, emai_id, phone_number, school_address, area, district, description
+     schoolName: school_name, emaiId:emai_id, phoneNumber:phone_number,  schoolAddress:school_address, area: area, district:district, description:description
      
     });
     return res.status(201).json({
