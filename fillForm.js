@@ -8,20 +8,14 @@ route.post("/innovationClub", async (req, res) => {
   try {
     console.log("came to route"
     )
-    const { Name, ParentName, mobile_no, School, Class, des, q_A } = req.body || {};
+    const { school_name, emai_id, phone_number, school_address, area, district, description } = req.body || {};
 
     if (!Name || !ParentName || !mobile_no || !School || !Class || !des || !q_A) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
     const newForm = await InnovationClub.create({
-      Name,
-      ParentName,
-      mobile_no,
-      School,
-      Class,
-      des,
-      q_A,
+      school_name, emai_id, phone_number, school_address, area, district, description
      
     });
     return res.status(201).json({

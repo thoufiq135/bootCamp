@@ -3,50 +3,42 @@ require("dotenv").config();
 
 const innovationClubSchema = new mongoose.Schema(
   {
-    Name: {
+    schoolName: {
       type: String,
       required: true,
       trim: true,
     },
-    ParentName: {
+    emaiId: {
       type: String,
       required: true,
       trim: true,
     },
-    mobile_no: {
+    phoneNumber: {
       type: String,
       required: true,
       trim: true,
     },
-    School: {
+    schoolAddress: {
       type: String,
       required: true,
       trim: true,
     },
-    Class: {
+    area: {
       type: String,
       required: true,
       trim: true,
     },
-    paymentId:{
+   district:{
       type:String,
 default: "pending",
     },
-    paymentStatus:{
-      type:String,
-       enum: ["pending", "success", "failed"],
-      default: "pending",
-    },
-    des: {
+   
+    description: {
       type: String,
       required: true,
       trim: true,
     },
-    q_A: {
-      type: String,
-      required: true,
-      trim: true,
-    },
+    
   },
   { timestamps: true }
 );
@@ -72,3 +64,4 @@ async function connectdb() {
 }
 
 module.exports = { InnovationClub, connectdb };
+, school address, area, district, description
